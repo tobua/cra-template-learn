@@ -1,0 +1,30 @@
+{
+  "name": "cra-template-learn",
+  "description": "Create React App template to learn Web Development with Tailwind.",
+  "version": "0.0.0-release-npm-action",
+  "repository": "github:tobua/cra-template-learn",
+  "homepage": "https://tobua.github.io/cra-template-learn",
+  "license": "MIT",
+  "author": "Matthias Giger",
+  "files": [
+    "template",
+    "template.json"
+  ],
+  "keywords": [
+    "react",
+    "create-react-app",
+    "template",
+    "tailwind",
+    "learn",
+    "learning",
+    "study"
+  ],
+  "prettier": {
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": true
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}

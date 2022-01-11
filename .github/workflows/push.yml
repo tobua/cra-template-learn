@@ -1,0 +1,25 @@
+name: push
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: 🚧 Build Demo
+        run: |
+          npx --yes create-react-app demo --template file:.
+          cd demo
+          npm run build
+      - name: 🚀 Publish Demo
+        uses: JamesIves/github-pages-deploy-action@4.2.2
+        with:
+          branch: demo
+          folder: demo/build
+      - name: 📢 Release
+        uses: tobua/release-npm-action@v1
+        with:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
