@@ -13,7 +13,7 @@ jobs:
         run: |
           npx --yes create-react-app demo --template file:.
           cd demo
-          npm run build
+          PUBLIC_URL=/cra-template-learn npm run build
       - name: 🚀 Publish Demo
         uses: JamesIves/github-pages-deploy-action@v4
         with:
